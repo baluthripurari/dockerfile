@@ -54,3 +54,18 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 * docker build -t url/username/image-name:tag . ---> will check for the dockerfile
 
+# DOCKER INSTRUCTIONS
+
+* FROM 
+  -----
+  FROM shuould be the first instruction to represent the base OS.
+  FROM image-name:tag
+
+* RUN
+ ------
+  We will use RUN instruction to install the packages and configure them.
+  run instruction will execute at the time of image creation.
+
+
+
+
