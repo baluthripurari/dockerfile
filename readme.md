@@ -39,4 +39,13 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 *  `docker run -d -p <host-port>:<container-port>` starts a new container in detached mode, mapping a specified port on the host to a port on the container.
 
-* 
+*  `docker logs <container ID>` retrieves and displays the logs from the specified container, showing its output and any error messages.
+
+* `docker logs -f <container ID>` streams the logs of the specified container in real-time, allowing you to see new log entries as they are generated.
+
+*  `docker inspect <container or image ID>` provides detailed information about a specified container or image in JSON format, including its configuration and state.
+
+* `docker exec -it <container ID> bash` opens an interactive bash shell in the specified running container, allowing you to execute commands inside it.
+
+ # DOCKERFILE ------>> It is the declarative way of creating custom images
+
