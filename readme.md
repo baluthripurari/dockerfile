@@ -62,7 +62,7 @@ docker run effectively combines the actions of docker pull (downloading the imag
   FROM image-name:tag
 
 * RUN
- ------
+  ------
   We will use RUN instruction to install the packages and configure them.
   run instruction will execute at the time of image creation.
 
