@@ -52,3 +52,5 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 *  " DOCKERFILE ------>> It is the declarative way of creating custom images "
 
+* docker build -t url/username/image-name:tag . ---> will check for the dockerfile
+
