@@ -1,5 +1,7 @@
 #       Docker commands
 
+*    Docker Image == Bare minimum OS + App run time + system packages and dependencies + App code (conatiner is the running istance of docker image)
+
 *    `docker ps` lists all running Docker containers.
 
 *    `usermod -aG docker <username>` adds the specified user to the Docker group, 
@@ -34,3 +36,7 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 # Q. How can you access docker container from internet ?
 # A. By enabling the port, we need to open host port that can redirect traffic to container
+
+*  `docker run -d -p <host-port>:<container-port>` starts a new container in detached mode, mapping a specified port on the host to a port on the container.
+
+* 
