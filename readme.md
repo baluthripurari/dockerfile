@@ -50,6 +50,8 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 * `docker exec -it <container ID> bash` opens an interactive bash shell in the specified running container, allowing you to execute commands inside it.
 
+* `docker images -f <filter>` lists Docker images with optional filters applied, allowing you to narrow down the results based on specific criteria, such as dangling images or specific labels.
+
 *  " DOCKERFILE ------>> It is the declarative way of creating custom images "
 
 * docker build -t url/username/image-name:tag . ---> will check for the dockerfile
@@ -71,5 +73,10 @@ docker run effectively combines the actions of docker pull (downloading the imag
   CMD instruction run at the time of container creation (The `CMD` instruction in a Dockerfile specifies the default command to run when a container is started from the image, which can be overridden by command-line arguments when running the container.)
 
 
+* LABEL
+  ------
+  The `LABEL` instruction in a Dockerfile adds metadata to an image in the form of key-value pairs, which can be used for documentation, organization, or management purposes.
 
-
+* EXPOSE 
+  -----
+  The `EXPOSE` instruction in a Dockerfile informs Docker that the container listens on specified network ports at runtime, serving as documentation for users and other developers, but it does not actually publish the ports.
