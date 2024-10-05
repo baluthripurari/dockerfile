@@ -24,10 +24,13 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 *    `docker rmi <image ID>` removes the specified image from the local Docker host, deleting it if no containers are using it.
 
-*
+*    `docker rmi -a -q <image ID>` removes all images matching the specified image ID, using the `-a` option to target all tags and `-q` to only show the image IDs without additional output.
 
-*
+*    docker rm `docker image -a -q` removes all locally stored Docker images by executing the    inner command to get all image IDs and passing them to `docker rmi`.
 
-*
+*   docker rm `docker ps -a -q` removes all stopped containers by executing the inner command to list all container IDs and passing them to `docker rm`.
 
-*
+*    `docker run -d nginx` starts a new Nginx container in detached mode, allowing it to run in the background.
+
+# Q. How can you access docker container from internet ?
+# A. By enabling the port, we need to open host port that can redirect traffic to container
