@@ -59,12 +59,16 @@ docker run effectively combines the actions of docker pull (downloading the imag
 * FROM 
   -----
   FROM shuould be the first instruction to represent the base OS.
-  FROM image-name:tag
+  FROM image-name:tag(The `FROM` instruction in a Dockerfile specifies the base image to use for the new image, defining the starting point for the build process.)
 
 * RUN
   ------
   We will use RUN instruction to install the packages and configure them.
-  run instruction will execute at the time of image creation.
+  run instruction will execute at the time of image creation.(The `RUN` instruction in a Dockerfile executes a command in the shell during the image build process, allowing you to install packages or modify the file system of the image.)
+
+* CMD
+  ----
+  CMD instruction run at the time of container creation (The `CMD` instruction in a Dockerfile specifies the default command to run when a container is started from the image, which can be overridden by command-line arguments when running the container.)
 
 
 
