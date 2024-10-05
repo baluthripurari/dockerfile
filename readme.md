@@ -34,8 +34,11 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 *    `docker run -d nginx` starts a new Nginx container in detached mode, allowing it to run in the background.
 
-# Q. How can you access docker container from internet ?
-# A. By enabling the port, we need to open host port that can redirect traffic to container
+
+
+ Q. How can you access docker container from internet ?
+ A. By enabling the port, we need to open host port that can redirect traffic to container
+
 
 *  `docker run -d -p <host-port>:<container-port>` starts a new container in detached mode, mapping a specified port on the host to a port on the container.
 
@@ -47,5 +50,5 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 * `docker exec -it <container ID> bash` opens an interactive bash shell in the specified running container, allowing you to execute commands inside it.
 
- # DOCKERFILE ------>> It is the declarative way of creating custom images
+*  " DOCKERFILE ------>> It is the declarative way of creating custom images "
 
