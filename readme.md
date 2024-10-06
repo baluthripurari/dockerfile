@@ -106,3 +106,7 @@ docker run effectively combines the actions of docker pull (downloading the imag
   -----
   Q what is the best practices in docker? A. It's best practice to avoid running containers with root access to enhance security, as it minimizes the potential impact of vulnerabilities or breaches by restricting permissions. Instead, create and use a non-root user within the container.
   * The `USER` instruction in a Dockerfile sets the username or UID (and optionally the group or GID) to use when running the container, allowing you to specify a non-root user for improved security.
+
+* WORKDIR
+  -------
+  The `WORKDIR` instruction in a Dockerfile sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions, making it easier to manage file paths within the container. If the directory does not exist, it will be created.
