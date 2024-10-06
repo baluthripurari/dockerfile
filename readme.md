@@ -110,3 +110,11 @@ docker run effectively combines the actions of docker pull (downloading the imag
 * WORKDIR
   -------
   The `WORKDIR` instruction in a Dockerfile sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions, making it easier to manage file paths within the container. If the directory does not exist, it will be created.
+
+* ARGS
+  ----
+  The `ARG` instruction in a Dockerfile defines a variable that users can pass at build-time to the Docker build process, allowing for dynamic configuration of the image. Unlike environment variables set with `ENV`, `ARG` variables are not available in the running container.
+  
+     1. **ARG** defines build-time variables; in this Dockerfile, `version`, `COURSE`, `TRAINER`, and `Duration` are specified, with a default version of `8` for the base image.
+  
+    2. **ENV** sets environment variables for the container; here, `Duration` is made available to applications running inside the container.
