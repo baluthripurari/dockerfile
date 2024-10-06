@@ -118,3 +118,9 @@ docker run effectively combines the actions of docker pull (downloading the imag
      1. **ARG** defines build-time variables; in this Dockerfile, `version`, `COURSE`, `TRAINER`, and `Duration` are specified, with a default version of `8` for the base image.
   
     2. **ENV** sets environment variables for the container; here, `Duration` is made available to applications running inside the container.
+
+* ONBUILD
+  ------
+  The `ONBUILD` instruction in a Dockerfile adds a trigger that will execute specified commands when the image is used as a base for another image. This is useful for creating reusable base images that automatically include additional setup in derived images.
+
+  this is useful as a trigger if someone is trying to use your image . you can force them to keep somefiles in their workspace or some configuration
