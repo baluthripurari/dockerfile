@@ -96,7 +96,8 @@ docker run effectively combines the actions of docker pull (downloading the imag
   The `ENTRYPOINT` instruction in a Dockerfile specifies a command that will always run when a container is started from the image, allowing you to configure a container to behave like a standalone executable. It can be combined with `CMD` to provide default arguments.
     * CMD instruction can be overridden
     * we cant override entrypoint , if you try to over ride it will be append
-    # CMD/ENTRYPOINT
+ * CMD/ENTRYPOINT
+   -----------
     * we can mix the CMD and entrypoint for better result
     * CMD is used to supply default arguments to ENTRYPOINT
     * we can always override defailt args from the run time.
