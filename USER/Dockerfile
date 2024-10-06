@@ -1,4 +1,4 @@
 FROM alpine:latest
-RUN adduser expense
+RUN adduser -D expense
 USER expense
 CMD ["tail", "-f", "/dev/null"]
