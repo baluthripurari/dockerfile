@@ -96,8 +96,13 @@ docker run effectively combines the actions of docker pull (downloading the imag
   The `ENTRYPOINT` instruction in a Dockerfile specifies a command that will always run when a container is started from the image, allowing you to configure a container to behave like a standalone executable. It can be combined with `CMD` to provide default arguments.
     * CMD instruction can be overridden
     * we cant override entrypoint , if you try to over ride it will be append
- * CMD/ENTRYPOINT
-   -----------
+    *   CMD/ENTRYPOINT
+         -----------
     * we can mix the CMD and entrypoint for better result
     * CMD is used to supply default arguments to ENTRYPOINT
     * we can always override defailt args from the run time.
+
+* USER
+  -----
+  Q what is the best practices in docker? A. It's best practice to avoid running containers with root access to enhance security, as it minimizes the potential impact of vulnerabilities or breaches by restricting permissions. Instead, create and use a non-root user within the container.
+  * The `USER` instruction in a Dockerfile sets the username or UID (and optionally the group or GID) to use when running the container, allowing you to specify a non-root user for improved security.
