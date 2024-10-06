@@ -52,6 +52,12 @@ docker run effectively combines the actions of docker pull (downloading the imag
 
 * `docker images -f <filter>` lists Docker images with optional filters applied, allowing you to narrow down the results based on specific criteria, such as dangling images or specific labels.
 
+* `docker tag <source-image> <target-image>` creates a new tag for an existing Docker image, allowing you to reference it by a different name or version, typically used for versioning or preparing images for pushing to a registry. 
+
+* `docker login -u <username>` prompts for the password and logs the user into a Docker registry with the specified username, allowing access to private repositories.
+
+* `docker push <username>/<image-name>:<tag>` uploads a local Docker image to the specified repository on Docker Hub, making it accessible to others or for use on different systems.
+
 *  " DOCKERFILE ------>> It is the declarative way of creating custom images "
 
 * docker build -t url/username/image-name:tag . ---> will check for the dockerfile
@@ -80,3 +86,7 @@ docker run effectively combines the actions of docker pull (downloading the imag
 * EXPOSE 
   -----
   The `EXPOSE` instruction in a Dockerfile informs Docker that the container listens on specified network ports at runtime, serving as documentation for users and other developers, but it does not actually publish the ports.
+
+* ENV
+  ----
+  The `ENV` instruction in a Dockerfile sets environment variables in the container, which can be accessed by applications running inside the container and can also influence the behavior of the image.
